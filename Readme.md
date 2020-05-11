@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Vladyslav Slovetskyi](https://up.htmlacademy.ru/htmlcss/28/user/819599).
-* Наставник: `Неизвестно`.
+* Наставник: [Evgeny Alipkin](https://htmlacademy.ru/profile/ealipkin).
 
 ---
 
