@@ -22,18 +22,18 @@
     </header>
     <main>
       <h1>Магазин готовых шаблонов</h1>
-      <form>
+      <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Стоимость:</legend>
           <ul>
-            <li><label>ОТ<input type="number" placeholder="0"></label></li>
-            <li><label>ДО<input type="number" placeholder="15 000"></label></li> 
+            <li><label>ОТ<input type="number" placeholder="0" name="price-from"></label></li>
+            <li><label>ДО<input type="number" placeholder="15 000" name="price-to"></label></li>
           </ul>  
         </fieldset>  
         <fieldset>
           <legend>Сетка:</legend>
           <ul>
-            <li><label><input type="radio" name="grid" value="adaptive">Адаптивная</label></li>
+            <li><label><input type="radio" name="grid" value="adaptive" checked>Адаптивная</label></li>
             <li><label><input type="radio" name="grid" value="fixed">Фиксированная</label></li> 
             <li><label><input type="radio" name="grid" value="rubber">Резиновая</label></li>
           </ul>  
@@ -41,9 +41,9 @@
         <fieldset>
           <legend>Особенности:</legend>
           <ul>
-            <li><label><input type="checkbox" name="features" value="slider">Слайдер</label></li>
+            <li><label><input type="checkbox" name="features" value="slider" checked>Слайдер</label></li>
             <li><label><input type="checkbox" name="features" value="advantages">Блок преимуществ</label></li>
-            <li><label><input type="checkbox" name="features" value="news">Новости</label></li>
+            <li><label><input type="checkbox" name="features" value="news" checked>Новости</label></li>
             <li><label><input type="checkbox" name="features" value="galery">Галерея</label></li>
             <li><label><input type="checkbox" name="features" value="shop-cart">Корзина</label></li>
           </ul>  
@@ -60,7 +60,7 @@
         <ul>
           <li>
             <img src="img/img-sedona.jpg" width="360" height="576" alt="Информационный сайт Sedona">
-            <div>
+            <div class="visually-hidden">
               <h4>Sedona</h4>
               <p>Информационный сайт для туристов</p>
               <button type="button">9 900 ₽</button>
@@ -68,7 +68,7 @@
           </li>
           <li>
             <img src="img/img-pink.jpg" width="358" height="576" alt="Продуктовый лендинг приложения Pink App">
-            <div>
+            <div class="visually-hidden">
               <h4>Pink App</h4>
               <p>Продуктовый лендинг приложения для iOS и Android </p>
               <button type="button">9 900 ₽</button>
@@ -76,7 +76,7 @@
           </li>
           <li>
             <img src="img/img-barbershop.jpg" width="364" height="582" alt="Сайт салона красоты Barbershop">
-            <div>
+            <div class="visually-hidden">
               <h4>Barbershop</h4>
               <p>Сайт салона красоты. Для мужчин, да.</p>
               <button type="button">9 900 ₽</button>
@@ -84,7 +84,7 @@
           </li>
           <li>
             <img src="img/img-mishka.jpg" width="362" height="580" alt="Интернет-магазин Mishka">
-            <div>
+            <div class="visually-hidden">
               <h4>Mishka</h4>
               <p>Интернет-магазин вязаных игрушек</p>
               <button type="button">9 900 ₽</button>
@@ -92,7 +92,7 @@
           </li>
           <li>
             <img src="img/img-aplus.jpg" width="364" height="582" alt="Лендинг курсов A Plus">
-            <div>
+            <div class="visually-hidden">
               <h4>A Plus</h4>
               <p>Лендинг курсов повышения квалификации</p>
               <button type="button">9 900 ₽</button>
@@ -100,7 +100,7 @@
           </li>
           <li>
             <img src="img/img-kvast.jpg" width="362" height="580" alt="Промо-сайт Kvas">
-            <div>
+            <div class="visually-hidden">
               <h4>Kvas</h4>
               <p>Промо-сайт производителя крафтового кваса</p>
               <button type="button">9 900 ₽</button>
@@ -119,7 +119,16 @@
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <p>19/8 тел. +7 (812) 275-75-75</p>
         <button type="button">Напишите нам</button>
-      </section>       
+      </section>
+      <form class="visually-hidden" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend>Напишите нам</legend>
+          <label>Ваше имя:<input type="text" name="name" placeholder="Имя Фамилия"></label>
+          <label>Ваш email:<input type="email" name="email" placeholder="email@example.com"></label>
+          <label>Текст письма:<input type="text" name="message-text" placeholder="В свободной форме"></label>
+          <button type="submit">Отправить</button>
+        </fieldset>  
+      </form>       
     </main>
     <footer>
       <ul>
