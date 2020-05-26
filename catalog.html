@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Дизайн-студия Нёрдс</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс"></a>
       <nav>
-        <ul>
+        <ul class="site-navigation">
           <a href="#"><li>Студия</li></a>
           <a href="#"><li>Клиенты</li></a>
           <a href="#"><li>Магазин</li></a>
@@ -21,7 +22,7 @@
       <a href="#">Корзина</a>
     </header>
     <main>
-      <h1>Магазин готовых шаблонов</h1>
+      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Стоимость:</legend>
@@ -50,9 +51,9 @@
         </fieldset>
         <button type="submit">ПОКАЗАТЬ</button>    
       </form>
-      <section>
+      <section class="cat-items">
         <h3>Сортировать:</h3>
-        <ul>
+        <ul class="sort-list">
           <li><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По названию</a></li>
@@ -60,7 +61,7 @@
         <ul>
           <li>
             <img src="img/img-sedona.jpg" width="360" height="576" alt="Информационный сайт Sedona">
-            <div>
+            <div class="item-cart">
               <h4>Sedona</h4>
               <p>Информационный сайт для туристов</p>
               <button type="button">9 900 ₽</button>
@@ -68,7 +69,7 @@
           </li>
           <li>
             <img src="img/img-pink.jpg" width="358" height="576" alt="Продуктовый лендинг приложения Pink App">
-            <div>
+            <div class="item-cart">
               <h4>Pink App</h4>
               <p>Продуктовый лендинг приложения для iOS и Android </p>
               <button type="button">9 900 ₽</button>
@@ -76,7 +77,7 @@
           </li>
           <li>
             <img src="img/img-barbershop.jpg" width="364" height="582" alt="Сайт салона красоты Barbershop">
-            <div>
+            <div class="item-cart">
               <h4>Barbershop</h4>
               <p>Сайт салона красоты. Для мужчин, да.</p>
               <button type="button">9 900 ₽</button>
@@ -84,7 +85,7 @@
           </li>
           <li>
             <img src="img/img-mishka.jpg" width="362" height="580" alt="Интернет-магазин Mishka">
-            <div>
+            <div class="item-cart">
               <h4>Mishka</h4>
               <p>Интернет-магазин вязаных игрушек</p>
               <button type="button">9 900 ₽</button>
@@ -92,7 +93,7 @@
           </li>
           <li>
             <img src="img/img-aplus.jpg" width="364" height="582" alt="Лендинг курсов A Plus">
-            <div>
+            <div class="item-cart">
               <h4>A Plus</h4>
               <p>Лендинг курсов повышения квалификации</p>
               <button type="button">9 900 ₽</button>
@@ -100,25 +101,27 @@
           </li>
           <li>
             <img src="img/img-kvast.jpg" width="362" height="580" alt="Промо-сайт Kvas">
-            <div>
+            <div class="item-cart">
               <h4>Kvas</h4>
               <p>Промо-сайт производителя крафтового кваса</p>
               <button type="button">9 900 ₽</button>
             </div>
           </li>
         </ul>
-        <ul>
+        <ul class="pagination">
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">Следующая</a></li>
         </ul>    
       </section> 
-      <section>
-        <h4>NЁRDS DESIGN STUDIO</h4>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <p>19/8 тел. +7 (812) 275-75-75</p>
-        <button type="button">Напишите нам</button>
+      <section class="contacts-block">
+        <div class="contacts">
+          <h4>NЁRDS DESIGN STUDIO</h4>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>19/8 тел. +7 (812) 275-75-75</p>
+          <button type="button">Напишите нам</button>
+        </div>  
       </section>
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
@@ -130,7 +133,7 @@
         </fieldset>  
       </form>       
     </main>
-    <footer>
+    <footer class="footer">
       <ul>
         <li><a href="#"><img src="img/vk-icon.svg" width="26" height="15" alt="Лого Вконтакте"></a></li>
         <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="Лого Фейсбук"></a></li>
