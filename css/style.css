@@ -1,400 +1,346 @@
 :root {
-    --basic-black: #000000;
-    --red-color: #FB565A;
-    --red-dark: #E74246;
-    --red-darker: #D7373B;
-    --green-color: #00CA74;
-    --green-dark: #00BC6C;
-    --green-darker: #00AA62;
-    --yellow-color: #EFC849;
-    --yellow-dark: #EAB534;
-    --yellow-darker: #E5A722;
-    --basic-gray: #EEEEEE;
-    --button-gray: #FFFFFF;
-    --dark-gray: #DFDFDF;
-    --darker-gray: #D5D5D5;
-    --text-black: #283136;
-    --lighter-black: #666666;
-    --light-black: #444444;
+  --basic-black: #000000;
+  --red-color: #FB565A;
+  --red-dark: #E74246;
+  --red-darker: #D7373B;
+  --green-color: #00CA74;
+  --green-dark: #00BC6C;
+  --green-darker: #00AA62;
+  --yellow-color: #EFC849;
+  --yellow-dark: #EAB534;
+  --yellow-darker: #E5A722;
+  --basic-gray: #EEEEEE;
+  --button-gray: #FFFFFF;
+  --dark-gray: #DFDFDF;
+  --darker-gray: #D5D5D5;
+  --text-black: #283136;
+  --lighter-black: #666666;
+  --light-black: #444444;
 }
 
 body {
-    width: 1440px;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-style: normal;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .header {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
-    font-style: normal;
-    color: var(--basic-black);
-    text-transform: uppercase;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
 }
 
 .site-navigation {
-    list-style: none;
+  list-style: none;
 }
 
-.header a {
-    color: var(--basic-black);
+.header .nav-button {
+  color: var(--basic-black);
 }
 
-.header a:hover {
-    color: var(--red-color);
+.header .nav-button:hover {
+  color: var(--red-color);
 }
 
-.header a:active {
-    color: var(--basic-black);
-    opacity: 0.3;
+.header .nav-button:active {
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
-.slider h2 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 55px;
-    color: var(--basic-black);
+.main-logo:active {
+  opacity: 0.3;
 }
 
-.slider p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--text-black);
+.slider-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
 }
 
-.slider a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--button-gray);
-    background-color: var(--red-color);
-    text-transform: uppercase;
+.slider-text {
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--text-black);
 }
 
-.slider a:hover {
-    color: var(--button-gray);
-    background-color: var(--red-dark);
+.button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--button-gray);
 }
 
-.slider a:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: var(--red-darker);
+.slider-button {
+  background-color: var(--red-color);
+}
+
+.slider-button:hover {
+  background-color: var(--red-dark);
+}
+
+.slider-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: var(--red-darker);
 }
 
 .services {
-    list-style: none;
+  list-style: none;
+  font-weight: normal;
 }
 
-.services h3 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: var(--basic-black);
+.services-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
-.services p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--text-black);
+.services-text {
+  line-height: 24px;
+  color: var(--text-black);
 }
 
-.services a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: var(--button-gray);
+.services .button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.services a:active {
-    color: rgba(255, 255, 255, 0.3);
+.services .red-button {
+  background-color: var(--red-color);
 }
 
-.web-sites a {
-    background-color: var(--red-color);
+.services .red-button:hover {
+  background-color: var(--red-dark);
 }
 
-.web-sites a:hover {
-    background-color: var(--red-dark);
+.services .red-button:active {
+  background-color: var(--red-darker);
 }
 
-.web-sites a:active {
-    background-color: var(--red-darker);
+.services .green-button {
+  background-color: var(--green-color);
 }
 
-.apps a {
-    background-color: var(--green-color);
+.services .green-button:hover {
+  background-color: var(--green-dark);
 }
 
-.apps a:hover {
-    background-color: var(--green-dark);
+.services .green-button:active {
+  background-color: var(--green-darker);
 }
 
-.apps a:active {
-    background-color: var(--green-darker);
+.services .yellow-button {
+  background-color: var(--yellow-color);
 }
 
-.presentations a {
-    background-color: var(--yellow-color);
+.services .yellow-button:hover {
+  background-color: var(--yellow-dark);
 }
 
-.presentations a:hover {
-    background-color: var(--yellow-dark);
+.services .yellow-button:active {
+  background-color: var(--yellow-darker);
 }
 
-.presentations a:active {
-    background-color: var(--yellow-darker);
+.about .about-title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
 }
 
-.about h2 {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 45px;
-    color: var(--basic-black);
+.about {
+  color: var(--text-black);
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.about-right .about-text {
+  line-height: 18px;
+}
+
+.about .about-subtitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.about .left-subtitle {
+  color: var(--text-black);
 }
 
 .about ul {
-    list-style: none;
+  list-style: none;
 }
 
-.about-1 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--text-black);
-}
-
-.about-1 h4 {
-    font-weight: bold;
-}
-
-.about-2 p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--text-black);
-}
-
-.about-2 .percent {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: 64px;
-    color: var(--basic-black);
+.about-right .percent {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
 }
 
 .percent sup {
-    font-size: 26px;
-    line-height: 40px;
-}
-
-.about-2 .about-title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: var(--basic-black);
+  font-size: 26px;
+  line-height: 40px;
 }
 
 .partners {
-    list-style: none;
+  list-style: none;
 }
 
 .partners a {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 .partners a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .partners a:active {
-    opacity: 0.1;
-}
-
-.contacts-block {
-    background-image: url(../img/map.jpg);
-    background-repeat: no-repeat;
-    height: 416px;
+  opacity: 0.1;
 }
 
 .contacts {
-    background-color: var(--button-gray);
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  height: 416px;
 }
 
-.contacts h4 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: var(--basic-black);
+.contacts-info {
+  background-color: var(--button-gray);
 }
 
-.contacts p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--lighter-black);
+.contacts-info .contacts-title {
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
-.contacts button {
-    border: none;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--button-gray);
-    background-color: var(--red-color);
+.contacts-info .contacts-text {
+  font-weight: normal;
+  color: var(--lighter-black);
 }
 
-.contacts button:hover {
-    background-color: var(--red-dark);
+.contacts-info .button {
+  border: none;
+  background-color: var(--red-color);
 }
 
-.contacts button:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: var(--red-darker);
+.contacts-info .button:hover {
+  background-color: var(--red-dark);
 }
 
-.footer ul {
-    list-style: none;
+.contacts-info .button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: var(--red-darker);
 }
 
-.footer h2 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 36px;
-    color: var(--basic-black);
+.footer .social-list {
+  list-style: none;
 }
 
-.footer p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--light-black);
+.footer-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+.footer-text {
+  font-weight: normal;
+  line-height: 22px;
+  color: var(--light-black);
 }
 
 .catalog-title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 55px;
-    color: var(--basic-black);
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
 }
 
-.cat-items h3 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: var(--basic-black);
+.catalog .sort-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
-.cat-items ul {
-    list-style: none;
+.catalog-page ul {
+  list-style: none;
 }
 
 .sort-list a {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: var(--basic-black);
-    opacity: 0.3;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 .sort-list a:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .sort-list a:active {
-    opacity: 1;
+  opacity: 1;
 }
 
-.item-cart {
-    background-color: var(--basic-gray);
+.catalog-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
-.item-cart h4 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: var(--basic-black);
+.catalog-item-text {
+  font-weight: normal;
+  color: var(--lighter-black);
 }
 
-.item-cart p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--lighter-black);
+.catalog-item .button {
+  border: none;
+  background-color: var(--red-color);
 }
 
-.item-cart button {
-    border: none;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: var(--button-gray);
-    background-color: var(--red-color);
+.catalog-item .button:hover {
+  background-color: var(--red-dark);
 }
 
-.item-cart button:hover {
-    background-color: var(--red-dark);
-}
-
-.item-cart button:active {
-    background-color: var(--red-darker);
+.catalog-item .button:active {
+  background-color: var(--red-darker);
 }
 
 .pagination a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--basic-black);
-    text-transform: uppercase;
-    background-color: var(--basic-gray);
+  font-weight: 500;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-gray);
 }
 
 .pagination a:hover {
-    background-color: var(--dark-gray);
+  background-color: var(--dark-gray);
 }
 
 .pagination a:active {
-    background-color: var(--darker-gray);
+  background-color: var(--darker-gray);
 }
