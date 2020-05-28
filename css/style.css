@@ -21,7 +21,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-style: normal;
@@ -84,18 +84,22 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--button-gray);
+  border: none;
 }
 
-.slider-button {
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-red {
   background-color: var(--red-color);
 }
 
-.slider-button:hover {
+.button-red:hover {
   background-color: var(--red-dark);
 }
 
-.slider-button:active {
-  color: rgba(255, 255, 255, 0.3);
+.button-red:active {
   background-color: var(--red-darker);
 }
 
@@ -117,47 +121,31 @@ img {
   color: var(--text-black);
 }
 
-.services .button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.services .red-button {
-  background-color: var(--red-color);
-}
-
-.services .red-button:hover {
-  background-color: var(--red-dark);
-}
-
-.services .red-button:active {
-  background-color: var(--red-darker);
-}
-
-.services .green-button {
+.button-green {
   background-color: var(--green-color);
 }
 
-.services .green-button:hover {
+.button-green:hover {
   background-color: var(--green-dark);
 }
 
-.services .green-button:active {
+.button-green:active {
   background-color: var(--green-darker);
 }
 
-.services .yellow-button {
+.button-yellow {
   background-color: var(--yellow-color);
 }
 
-.services .yellow-button:hover {
+.button-yellow:hover {
   background-color: var(--yellow-dark);
 }
 
-.services .yellow-button:active {
+.button-yellow:active {
   background-color: var(--yellow-darker);
 }
 
-.about .about-title {
+.about-title {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
@@ -170,7 +158,7 @@ img {
   line-height: 24px;
 }
 
-.about-right .about-text {
+.about-text {
   line-height: 18px;
 }
 
@@ -184,11 +172,11 @@ img {
   color: var(--text-black);
 }
 
-.about ul {
+.about-list {
   list-style: none;
 }
 
-.about-right .percent {
+.percent {
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
@@ -226,30 +214,16 @@ img {
   background-color: var(--button-gray);
 }
 
-.contacts-info .contacts-title {
+.contacts-title {
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
 }
 
-.contacts-info .contacts-text {
+.contacts-text {
   font-weight: normal;
   color: var(--lighter-black);
-}
-
-.contacts-info .button {
-  border: none;
-  background-color: var(--red-color);
-}
-
-.contacts-info .button:hover {
-  background-color: var(--red-dark);
-}
-
-.contacts-info .button:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: var(--red-darker);
 }
 
 .footer .social-list {
@@ -317,17 +291,8 @@ img {
   color: var(--lighter-black);
 }
 
-.catalog-item .button {
-  border: none;
-  background-color: var(--red-color);
-}
-
-.catalog-item .button:hover {
-  background-color: var(--red-dark);
-}
-
 .catalog-item .button:active {
-  background-color: var(--red-darker);
+  color: var(--button-gray);
 }
 
 .pagination a {
