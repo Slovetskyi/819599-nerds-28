@@ -32,25 +32,38 @@
   <main class="catalog-page">
     <h1 class="catalog-title">Магазин готовых шаблонов</h1>
     <div class="container shop-page">
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
+      <form action="https://echo.htmlacademy.ru" method="get" class="filter-form">
+        <fieldset class="filter-item">
           <legend>Стоимость:</legend>
-          <ul>
-            <li><label>ОТ<input type="number" placeholder="0" name="price-from"></label></li>
-            <li><label>ДО<input type="number" placeholder="15 000" name="price-to"></label></li>
-          </ul>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0"></div>
+              <div class="toggle toggle-max" tabindex="0"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
+          </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-item filter-grid">
           <legend>Сетка:</legend>
-          <ul>
+          <ul class="grid-filter-list filter-list">
             <li><label><input type="radio" name="grid" value="adaptive" checked>Адаптивная</label></li>
             <li><label><input type="radio" name="grid" value="fixed">Фиксированная</label></li>
             <li><label><input type="radio" name="grid" value="rubber">Резиновая</label></li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-item filter-features">
           <legend>Особенности:</legend>
-          <ul>
+          <ul class="features-filter-list filter-list">
             <li><label><input type="checkbox" name="features" value="slider" checked>Слайдер</label></li>
             <li><label><input type="checkbox" name="features" value="advantages">Блок преимуществ</label></li>
             <li><label><input type="checkbox" name="features" value="news" checked>Новости</label></li>
@@ -58,7 +71,7 @@
             <li><label><input type="checkbox" name="features" value="shop-cart">Корзина</label></li>
           </ul>
         </fieldset>
-        <button type="submit">ПОКАЗАТЬ</button>
+        <button class="filter-button" type="submit">ПОКАЗАТЬ</button>
       </form>
       <section class="catalog">
         <div class="sort-block">
@@ -81,8 +94,8 @@
             </div>
             <div class="item-text-block">
               <h4 class="catalog-item-title">Sedona</h4>
-              <p class="catalog-item-text">Информационный сайт для туристов</p>
-              <button type="button" class="button button-red">9 900 ₽</button>
+              <p class="catalog-item-text">Информационный сайт<br> для туристов</p>
+              <button type="button" class="button button-red catalog-button">9 900 ₽</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -92,8 +105,8 @@
             </div>
             <div class="item-text-block">
               <h4 class="catalog-item-title">Pink App</h4>
-              <p class="catalog-item-text">Продуктовый лендинг приложения для iOS и Android </p>
-              <button type="button" class="button button-red">9 900 ₽</button>
+              <p class="catalog-item-text">Продуктовый лендинг<br> приложения для iOS и Android </p>
+              <button type="button" class="button button-red catalog-button">9 900 ₽</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -103,8 +116,8 @@
             </div>
             <div class="item-text-block">
               <h4 class="catalog-item-title">Barbershop</h4>
-              <p class="catalog-item-text">Сайт салона красоты. Для мужчин, да.</p>
-              <button type="button" class="button button-red">9 900 ₽</button>
+              <p class="catalog-item-text">Сайт салона красоты.<br> Для мужчин, да.</p>
+              <button type="button" class="button button-red catalog-button">9 900 ₽</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -114,8 +127,8 @@
             </div>
             <div class="item-text-block">
               <h4 class="catalog-item-title">Mishka</h4>
-              <p class="catalog-item-text">Интернет-магазин вязаных игрушек</p>
-              <button type="button" class="button button-red">9 900 ₽</button>
+              <p class="catalog-item-text">Интернет-магазин<br> вязаных игрушек</p>
+              <button type="button" class="button button-red catalog-button">9 900 ₽</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -125,8 +138,8 @@
             </div>
             <div class="item-text-block">
               <h4 class="catalog-item-title">A Plus</h4>
-              <p class="catalog-item-text">Лендинг курсов повышения квалификации</p>
-              <button type="button" class="button button-red">9 900 ₽</button>
+              <p class="catalog-item-text">Лендинг курсов повышения<br> квалификации</p>
+              <button type="button" class="button button-red catalog-button">9 900 ₽</button>
             </div>
           </li>
           <li class="catalog-item">
@@ -135,17 +148,17 @@
               <img src="img/img-kvast.jpg" width="362" height="580" alt="Промо-сайт Kvas" class="catalog-item-image">
             </div>
             <div class="item-text-block">
-              <h4 class="catalog-item-title">Kvas</h4>
-              <p class="catalog-item-text">Промо-сайт производителя крафтового кваса</p>
-              <button type="button" class="button button-red">9 900 ₽</button>
+              <h4 class="catalog-item-title">Кваст</h4>
+              <p class="catalog-item-text">Промо-сайт производителя<br> крафтового кваса</p>
+              <button type="button" class="button button-red catalog-button">9 900 ₽</button>
             </div>
           </li>
         </ul>
         <ul class="pagination">
-          <li><a>1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
+          <li><a class="pagination-button">1</a></li>
+          <li><a class="pagination-button" href="#">2</a></li>
+          <li><a class="pagination-button" href="#">3</a></li>
+          <li><a class="pagination-button next-button" href="#">Следующая</a></li>
         </ul>
       </section>
     </div>
@@ -160,13 +173,17 @@
       </div>
     </section>
     <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
-      <fieldset>
-        <legend>Напишите нам</legend>
-        <label>Ваше имя:<input type="text" name="name" placeholder="Имя Фамилия"></label>
-        <label>Ваш email:<input type="email" name="email" placeholder="email@example.com"></label>
-        <label>Текст письма:<input type="text" name="message-text" placeholder="В свободной форме"></label>
-        <button type="submit" class="button">Отправить</button>
-      </fieldset>
+      <div class="feedback-container">
+        <fieldset class="feedback-field">
+          <legend class="feedback-title">Напишите нам</legend>
+          <div class="feedback-contacts">
+            <label class="input-title">Ваше имя:<input class="feedback-name form-input" type="text" name="name" placeholder="Имя Фамилия"></label>
+            <label class="input-title">Ваш email:<input class="feedback-email form-input" type="email" name="email" placeholder="email@example.com"></label>
+          </div>
+          <label class="input-title input-text">Текст письма:<input class="feedback-text" type="text" name="message-text" placeholder="В свободной форме"></label>
+          <button type="submit" class="button button-red feedback-button">Отправить</button>
+        </fieldset>
+      </div>
     </form>
   </main>
   <footer class="footer">

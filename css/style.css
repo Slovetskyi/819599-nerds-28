@@ -13,8 +13,12 @@
   --button-gray: #FFFFFF;
   --dark-gray: #DFDFDF;
   --darker-gray: #D5D5D5;
+  --filter-gray: #f1f1f1;
+  --scale-gray: #d7dcde;
+  --shadow-gray: #cfcfcf;
   --text-black: #283136;
   --lighter-black: #666666;
+  --toggle-gray: #ababab;
   --light-black: #444444;
 }
 
@@ -46,6 +50,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -206,6 +211,8 @@ ul {
   text-transform: uppercase;
   color: var(--button-gray);
   border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .button:active {
@@ -451,6 +458,7 @@ display: flex;
 .contacts-title {
   font-weight: bold;
   line-height: 30px;
+  font-size: 18px;
   text-transform: uppercase;
   color: var(--basic-black);
   margin: 0;
@@ -473,10 +481,6 @@ display: flex;
   padding: 17px 44px;
 }
 
-.feedback-form {
-  display: none;
-}
-
 .social-list {
   display: flex;
   padding-top: 68px;
@@ -490,6 +494,7 @@ display: flex;
   border-radius: 50%;
   position: relative;
   margin-right: 9px;
+  cursor: pointer;
 }
 
 .social-list li:hover {
@@ -571,7 +576,7 @@ display: flex;
   display: flex;
   align-items: center;
   margin: 0;
-  margin-left: 266px;
+  margin-left: 281px;
   padding: 0;
 }
 
@@ -586,7 +591,7 @@ display: flex;
 .price-sort-list {
   display: flex;
   align-items: center;
-  margin-left: 40px;
+  margin-left: 46px;
 }
 
 .price-sort-list li {
@@ -618,8 +623,17 @@ display: flex;
   flex-direction: column;
 }
 
+.catalog-item-image {
+  border-radius: 0 0 5px 5px;
+}
+
 .item-text-block {
   display: none;
+  border-radius: 0 0 5px 5px;
+  width: 360px;
+  height: 231px;
+  background-color: var(--basic-gray);
+  text-align: center;
 }
 
 .catalog .sort-title {
@@ -652,28 +666,269 @@ display: flex;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin: 0;
+  padding-top: 26px;
 }
 
 .catalog-item-text {
   font-weight: normal;
   color: var(--lighter-black);
+  margin: 0;
+  margin-top: 12px;
+}
+
+.catalog-button {
+  padding: 17px 72px 15px 72px;
+  margin-top: 33px;
 }
 
 .catalog-item .button:active {
   color: var(--button-gray);
 }
 
+.catalog-item {
+  width: 360px;
+  margin-bottom: 30px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-left: 42px;
+}
+
+.catalog-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pagination {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 45px;
+  margin-bottom: 80px;
+}
+
 .pagination a {
   font-weight: 500;
   color: var(--basic-black);
   text-transform: uppercase;
-  background-color: var(--basic-gray);
 }
 
-.pagination a:hover {
+.pagination-button {
+  background-color: var(--basic-gray);
+  padding: 17px 20px 15px 20px;
+  margin-right: 11px;
+  border-radius: 3px;
+}
+
+.next-button {
+  margin-right: 0;
+  padding: 17px 77px 15px 77px;
+}
+
+.pagination-button:hover {
   background-color: var(--dark-gray);
 }
 
-.pagination a:active {
+.pagination-button:active {
   background-color: var(--darker-gray);
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  background-color: var(--filter-gray);
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--scale-gray);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--green-color);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--button-gray);
+  background-color: var(--toggle-gray);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--shadow-gray);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  line-height: 22px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--text-black);
+  border: none;
+  border-radius: 5px;
+  background: var(--filter-gray);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.filter-form {
+  margin-top: 55px;
+}
+
+.filter-grid {
+  margin-top: 54px;
+}
+
+.filter-features {
+  margin-top: 43px;
+}
+
+.filter-button {
+  border: none;
+  width: 260px;
+  height: 50px;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: var(--basic-gray);
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: var(--dark-gray);
+}
+
+.filter-button:active {
+  background-color: var(--darker-gray);
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.filter-list {
+  margin-top: 16px;
+}
+
+.filter-list li {
+  margin-bottom: 16px;
+}
+
+.filter-list li:last-child {
+  margin-bottom: 0px;
+}
+
+.feedback-form {
+  width: 960px;
+  display: none;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feedback-field {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.feedback-title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+  margin-top: 63px;
+}
+
+.input-title {
+  font-weight: bold;
+}
+
+.form-input {
+  width: 360px;
+  height: 50px;
+  border: 2px solid var(--scale-gray);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.feedback-text {
+  width: 760px;
+  height: 120px;
+  border: 2px solid var(--scale-gray);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+input, label {
+    display: block;
+}
+
+.feedback-contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 37px;
+}
+
+.input-text {
+  margin-top: 34px;
+}
+
+.feedback-container {
+  width: 760px;
+  margin: auto;
+}
+
+.feedback-field input {
+  margin-top: 9px;
+}
+
+.feedback-button {
+  padding: 17px 83px 15px 83px;
+  margin-top: 64px;
+  margin-bottom: 84px;
 }
