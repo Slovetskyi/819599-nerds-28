@@ -14,7 +14,7 @@
 <body class="page-body">
   <header class="header">
     <div class="container header-content">
-      <a><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" class="main-logo"></a>
+      <a><img src="img/nerds-logo.svg" width="160" height="66" alt="Логотип дизайн-студии Нёрдс" class="main-logo"></a>
       <nav>
         <ul class="site-navigation">
           <li><a href="#" class="nav-button">Студия</a></li>
@@ -23,10 +23,10 @@
           <li><a href="#" class="nav-button">Контакты</a></li>
         </ul>
       </nav>
-      <div class="cart-container">
-        <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина" class="cart-icon">
-        <a href="#" class="nav-button">Корзина</a>
-      </div>
+        <a href="#" class="nav-button">
+          <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина" class="cart-icon">
+          Корзина
+        </a>
     </div>
   </header>
   <main>
@@ -136,28 +136,27 @@
       </ul>
     </div>
     <section class="contacts">
-      <div class="contacts-info">
+      <div class="container contacts-container">
         <div class="contacts-text-container">
           <h4 class="contacts-title">NЁRDS DESIGN STUDIO</h4>
           <p class="contacts-text contacts-adress">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</p>
           <p class="contacts-text">тел. +7 (812) 275-75-75</p>
-          <button type="button" class="button contacts-button button-red">Напишите нам</button>
+          <a href="#" class="button contacts-button button-red">Напишите нам</a>
+          <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
+            <button class="close-popup" type="button"></button>
+            <fieldset class="feedback-field">
+              <legend class="feedback-title">Напишите нам</legend>
+              <div class="feedback-contacts">
+                <label class="input-title">Ваше имя:<input class="feedback-name form-input" type="text" name="name" placeholder="Имя Фамилия"></label>
+                <label class="input-title">Ваш email:<input class="feedback-email form-input" type="email" name="email" placeholder="email@example.com"></label>
+              </div>
+              <label class="input-title input-text">Текст письма:<textarea class="feedback-text" type="text" name="message-text" placeholder="В свободной форме"></textarea></label>
+              <button type="submit" class="button button-red feedback-button">Отправить</button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </section>
-    <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
-      <div class="feedback-container">
-        <fieldset class="feedback-field">
-          <legend class="feedback-title">Напишите нам</legend>
-          <div class="feedback-contacts">
-            <label class="input-title">Ваше имя:<input class="feedback-name form-input" type="text" name="name" placeholder="Имя Фамилия"></label>
-            <label class="input-title">Ваш email:<input class="feedback-email form-input" type="email" name="email" placeholder="email@example.com"></label>
-          </div>
-          <label class="input-title input-text">Текст письма:<input class="feedback-text" type="text" name="message-text" placeholder="В свободной форме"></label>
-          <button type="submit" class="button button-red feedback-button">Отправить</button>
-        </fieldset>
-      </div>
-    </form>
   </main>
   <footer class="footer">
     <div class="container">
