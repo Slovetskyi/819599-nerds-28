@@ -15,13 +15,13 @@
       <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нёрдс" class="main-logo"></a>
       <nav>
         <ul class="site-navigation">
-          <li><a href="#" class="nav-button">Студия</a></li>
-          <li><a href="#" class="nav-button">Клиенты</a></li>
-          <li><a class="nav-button nav-button-active">Магазин<a></li>
-          <li><a href="#" class="nav-button">Контакты</a></li>
+          <li><a href="#" class="nav-button nav-button-not-active">Студия</a></li>
+          <li><a href="#" class="nav-button nav-button-not-active">Клиенты</a></li>
+          <li><a class="nav-button nav-button-active">Магазин</a></li>
+          <li><a href="#" class="nav-button nav-button-not-active">Контакты</a></li>
         </ul>
       </nav>
-      <a href="#" class="nav-button">
+      <a href="#" class="nav-button nav-button-not-active">
         <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина" class="cart-icon">
         Корзина
       </a>
@@ -38,8 +38,8 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="toggle toggle-min" tabindex="0"></div>
-              <div class="toggle toggle-max" tabindex="0"></div>
+              <button class="toggle toggle-min" tabindex="0"></button>
+              <button class="toggle toggle-max" tabindex="0"></button>
             </div>
             <div class="price-controls">
               <label class="min-price">
@@ -54,19 +54,67 @@
         <fieldset class="filter-item filter-grid">
           <legend>Сетка:</legend>
           <ul class="grid-filter-list filter-list">
-            <li><input class="radio-input" type="radio" name="grid" value="adaptive" id="adaptive" checked><label for="adaptive">Адаптивная</label></li>
-            <li><input class="radio-input" type="radio" name="grid" value="fixed" id="fixed"><label for="fixed">Фиксированная</label></li>
-            <li><input class="radio-input" type="radio" name="grid" value="rubber" id="rubber"><label for="rubber">Резиновая</label></li>
+            <li>
+              <label>
+                <input class="radio-input visually-hidden" type="radio" name="grid" value="adaptive" checked>
+                <span class="radio-icon"></span>
+                Адаптивная
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="radio-input visually-hidden" type="radio" name="grid" value="fixed">
+                <span class="radio-icon"></span>
+                Фиксированная
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="radio-input visually-hidden" type="radio" name="grid" value="rubber">
+                <span class="radio-icon"></span>
+                Резиновая
+              </label>
+            </li>
           </ul>
         </fieldset>
         <fieldset class="filter-item filter-features">
           <legend>Особенности:</legend>
           <ul class="features-filter-list filter-list">
-            <li><input class="checkbox-input" type="checkbox" name="features" value="slider" id="slider" checked><label for="slider">Слайдер</label></li>
-            <li><input class="checkbox-input" type="checkbox" name="features" value="advantages" id="advantages"><label for="advantages">Блок преимуществ</label></li>
-            <li><input class="checkbox-input" type="checkbox" name="features" value="news" id="news" checked><label for="news">Новости</label></li>
-            <li><input class="checkbox-input" type="checkbox" name="features" value="gallery" id="gallery"><label for="gallery">Галерея</label></li>
-            <li><input class="checkbox-input" type="checkbox" name="features" value="shop-cart" id="shop-cart"><label for="shop-cart">Корзина</label></li>
+            <li>
+              <label>
+                <input class="checkbox-input visually-hidden" type="checkbox" name="features" value="slider" checked>
+                <span class="checkbox-icon"></span>
+                Слайдер
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="checkbox-input visually-hidden" type="checkbox" name="features" value="advantages">
+                <span class="checkbox-icon"></span>
+                Блок преимуществ
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="checkbox-input visually-hidden" type="checkbox" name="features" value="news" checked>
+                <span class="checkbox-icon"></span>
+                Новости
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="checkbox-input visually-hidden" type="checkbox" name="features" value="gallery">
+                <span class="checkbox-icon"></span>
+                Галерея
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="checkbox-input visually-hidden" type="checkbox" name="features" value="shop-cart">
+                <span class="checkbox-icon"></span>
+                Корзина
+              </label>
+            </li>
           </ul>
         </fieldset>
         <button class="filter-button" type="submit">ПОКАЗАТЬ</button>
@@ -75,13 +123,13 @@
         <div class="sort-block">
           <h3 class="sort-title">Сортировать:</h3>
           <ul class="sort-list">
-            <li><a class="sort-list-active-item">По цене</a></li>
-            <li><a class="sort-list-item" href="#">По типу</a></li>
-            <li><a class="sort-list-item" href="#">По названию</a></li>
+            <li><a class="sort-list-item sort-list-active-item">По цене</a></li>
+            <li><a class="sort-list-item sort-list-item-not-active" href="#">По типу</a></li>
+            <li><a class="sort-list-item sort-list-item-not-active" href="#">По названию</a></li>
           </ul>
           <ul class="price-sort-list">
-            <li><a><img class="active-price-sort" src="img/icon-down-dir.svg"></a></li>
-            <li><a href="#"><img src="img/icon-up-dir.svg"></a></li>
+            <li><a class="active-price-sort price-down"></a></li>
+            <li><a class="not-active-price-sort price-up" href="#"></a></li>
           </ul>
         </div>
         <ul class="catalog-items">
@@ -153,14 +201,15 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li><a class="pagination-button-active">1</a></li>
-          <li><a class="pagination-button" href="#">2</a></li>
-          <li><a class="pagination-button" href="#">3</a></li>
-          <li><a class="pagination-button next-button" href="#">Следующая</a></li>
+          <li><a class="pagination-button pagination-button-active">1</a></li>
+          <li><a class="pagination-button pagination-button-not-active" href="#">2</a></li>
+          <li><a class="pagination-button pagination-button-not-active" href="#">3</a></li>
+          <li><a class="pagination-button next-button pagination-button-not-active" href="#">Следующая</a></li>
         </ul>
       </section>
     </div>
     <section class="contacts">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d353.30838074596926!2d30.323142067361847!3d59.93854677950412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1592910925642!5m2!1sru!2sua" width="100%" height="420" allowfullscreen></iframe>
       <div class="container contacts-container">
         <div class="contacts-text-container">
           <h4 class="contacts-title">NЁRDS DESIGN STUDIO</h4>

@@ -31,10 +31,10 @@ function popupRemover() {
 
 popup.addEventListener("submit", function (evt) {
   if (!loginLogin.value || !loginEmail.value) {
-  evt.preventDefault();
-  popup.classList.remove("feedback-error");
-  popup.offsetWidth = popup.offsetWidth;
-  popup.classList.add("feedback-error");
+    evt.preventDefault();
+    popup.classList.remove("feedback-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("feedback-error");
   }
   if (!loginLogin.value) {
     loginLogin.classList.add("input-error");
