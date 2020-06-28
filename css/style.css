@@ -166,6 +166,7 @@ ul {
 .slider-button {
   display: inline-block;
   padding: 17px 54px;
+  vertical-align: auto;
 }
 
 .slider-image {
@@ -309,6 +310,7 @@ ul {
 .services-item .button {
   padding: 17px 40px;
   display: inline-block;
+  vertical-align: auto;
 }
 
 .button-green {
@@ -610,6 +612,7 @@ display: flex;
 .sort-block {
   display: flex;
   padding: 55px 0 48px 0;
+  vertical-align: auto;
 }
 
 .sort-title {
