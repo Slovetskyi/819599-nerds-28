@@ -53,7 +53,6 @@ body {
 
 a {
   text-decoration: none;
-  cursor: pointer;
 }
 
 img {
@@ -145,7 +144,7 @@ ul {
   display: block;
 }
 
-.main-logo:active {
+.main-logo[href]:active img {
   opacity: 0.3;
 }
 
@@ -740,6 +739,34 @@ display: flex;
   opacity: 1;
 }
 
+.catalog-item:focus {
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+  border-radius: 5px;
+  position: relative;
+}
+
+.catalog-item:focus .browser-panel {
+  opacity: 1;
+}
+
+.catalog-item:focus .item-text-block {
+  display: block;
+}
+
+.catalog-item:focus-within {
+  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+  border-radius: 5px;
+  position: relative;
+}
+
+.catalog-item:focus-within .browser-panel {
+  opacity: 1;
+}
+
+.catalog-item:focus-within .item-text-block {
+  display: block;
+}
+
 .catalog-item:hover {
   box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
   border-radius: 5px;
@@ -1043,11 +1070,11 @@ display: flex;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
   padding: 63px 100px 83px 100px;
-  position: absolute;
-  top: -147px;
-  left: 50%;
-  transform:translateX(-50%);
+  position: fixed;
+  left: 470px;
+  top: 155px;
   background-color: var(--button-gray);
+  z-index: 2;
 }
 
 .feedback-form-opened {
@@ -1061,7 +1088,7 @@ display: flex;
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
 
   10%,
@@ -1069,14 +1096,14 @@ display: flex;
   50%,
   70%,
   90% {
-    transform: translateX(-49%);
+    transform: translateX(1%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(-51%);
+    transform: translateX(-1%);
   }
 }
 
