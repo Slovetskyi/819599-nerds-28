@@ -487,6 +487,10 @@ display: flex;
   padding: 50px 50px;
 }
 
+.contacts-text a {
+  color: var(--lighter-black);
+}
+
 .contacts-container {
   padding-top: 48px;
   padding-bottom: 60px;
